@@ -2,9 +2,67 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>예제</title>
 </head>
 <body>
+<form action="prac_0313.html" method="post">
+<table width="450px">
+<tr>
+<td colspan="2">
+	다음 
+	<font style="background-color: orange;"><b>내용에 맞게 입력</b></font>
+	 하시오.<br>
+	전공 분야를 입력하세요.
+	<select size="1">
+		<option value="p1" selected> 소프트웨어
+		<option value="p2"> 하드웨어 
+		<option value="p3"> 인공지능
+		<option value="p4"> 무직
+		<option value="p5"> 프로게이머
+	</select><br>
+</td>
+<td></td>
+<td rowspan="2">
+<img src="0001.jpg" width="150px" height="150px" border="1" >
+</td>
 
+<tr>
+<td>
+<p>이 름 : <br>
+<p>아 이 디 : <br>
+<p>비밀번호 : 
+</td>
+<td>
+	<p><input type="text" name="nametf" width="100px"><br>
+	<p><input type="text" name="idtf" width="100px"><br>
+	<p><input type="password" name="pwtf">
+</td>
+</tr>
+
+
+</table>
+	<fieldset style="border-color: black; width: 420px">
+		<legend>성별 조사</legend>
+		여성<input type="radio" name="rdo" checked="checked">
+		남성<input type="radio" name="rdo">
+	</fieldset>
+	<fieldset style="border-color: black; width: 420px" >
+		<legend>취미 조사</legend>
+		<input type="checkbox"> 책읽기
+		<input type="checkbox"> 공부하기
+		<input type="checkbox"> 책 읽으며 공부하기
+		<input type="checkbox"> 컴퓨터
+	</fieldset>
+	
+	<fieldset style="border-color: black; width: 420px">
+		<legend>하고 싶은 말</legend>
+		<textarea rows="4" cols="50">
+		</textarea>
+	</fieldset>
+		<input type="submit" value="완료" >
+	<input type="reset" value="다시작성"><br>
+	</form>
+	
+	
 </body>
 </html>
