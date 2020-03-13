@@ -8,6 +8,84 @@
 	<h3>
 		<b>HTML 연습</b>
 	</h3>
+	<hr>
+	<input type="button" value="버튼"><br>
+	<input type="submit" value="서브밋"><br>
+	<input type="reset" value="리셋"><br>
+	<!-- 초기화 시켜 줄때 사용 -->
+	<hr>
+	
+	<input type="text" value="text"><br>
+	<!-- textfield의 역할 value 값 없이 사용도 가능 -->
+	<input type="password" value="password" maxlength="10"><br>
+	<!-- 비밀번호 입력하는 란이 됨 -->
+	<hr>
+	<h3>Radio Box</h3>
+	10대<input type="radio" name="age" checked="checked">
+	20대<input type="radio" name="age" >
+	30대<input type="radio" name="age" >
+	40대<input type="radio" name="age" >
+	<!-- name(속성값)은 라디오의 그룹을 지정해주는 것과 동일함
+		 변수값으로도 사용할 수 있다.(이름으로 재 사용 가능)      -->
+	<hr>
+	<h3>Check Box</h3>
+	산책<input type="checkbox">
+	음악<input type="checkbox">
+	영화<input type="checkbox">
+	운동<input type="checkbox">
+	<!-- 체크 박스 -->
+	<hr>
+	<form action="NewFile.html" method="post">
+	이름 <input type="text" name="name"><br>
+	주소 <input type="text" name="addr"><br>
+	<input type="reset" value="초기화">
+	<input type="submit" value="전송">
+	<input type="button" value="버튼"><br>
+	</form>
+	<!-- reset과 submit은 <form>으로 묶어줘야한다.
+		 button은 javascript와 연동해서 쓰는거고 form과 무관하다. -->
+	<!-- form action="할일(링크)" -->
+	<!-- name은 java에서 변수처럼 사용할 수 있기 때문에 name값을 가지고 값의 이동 연습을 해 볼 것이다. -->
+	<!-- <form action="NewFile.html" method="get">
+		 method="get" 방식 : url뒤에 값이 붙어서 넘어가게 된다.(보안에 취약,데이터에 대한 제한256byte) -->
+	<!-- <form action="NewFile.html" method="post">
+		 method="post" 방식 : http에 붙여서 넘겨주게 되는 방식(프로토콜(통신규약)에 웹으로 통신을 하겠다는 약속)
+		 직접적으로 뭔가 보여지는 것은 없다. -->
+	<hr>
+	<form>
+		<select size="1" name="test">
+			<option value"p1" selected> 사과
+			<option value"p2"> 배
+			<option value"p3"> 귤
+		</select>
+		<input type="submit" value="전송">
+	</form>
+	<!-- select,option은 java에서 사용한 listView와 같은 것들이다.
+		 size="1" 보여지는 리스트의 값, value에 값이 있어야 글자가 표현이 된다.
+		 test의 값을 불러오면 p1, p2, p3 의 값들이 호출되게 된다. 글자의 값을 불러오는 것은 아니다.-->
+	<hr>
+	<h3>TextArea</h3>
+	<textarea rows="3" cols="50"></textarea><br>
+	<button type="submit">
+		<img src="0001.jpg" width="50px" height="50px">
+	</button>
+	<button type="button">버튼</button>
+	<!--  input은 value라는 속성을 이용하지만  button 태그를 쓰는 경우 가운데 값을 넣어준다. 속성에 따라서 달라진다
+		  button을 사용해도 input과 동일하게 동작한다는 것을 보여주기 위함이다. -->
+	<hr>
+	<fieldset style="width:170px">
+		<legend> 취미 조사</legend>
+		운동<input type="checkbox">
+		수면<input type="checkbox">
+		식사<input type="checkbox">
+	</fieldset>
+	<hr>
+	
+	
+	
+	
+	
+	
 	<table style="background-color: yellow;" align="center" border="1" width="500px" height="300px">
 		<tr>
 			<th colspan="4"><u style="color: red">
