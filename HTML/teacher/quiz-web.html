@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <style>
+    	#wrap{ max-width:800px; margin:0 auto;}
+        ul{
+            background-color:pink;  padding:10px 0px 10px 10px;
+            text-align:right;    overflow:hidden;
+        }
+        li{ 
+            display:inline;    list-style: none;   
+            padding: 20px 20px 20px 20px;
+            text-align: center;    background-color:red;
+        }
+        li:hover{    background-color:#555555;    }
+        a{ width:100%; text-decoration: none; color:white; }
+        
+        .section{height:500px;}
+      	.section > .swrite{color:white;}
+        
+        input:focus { background-color: red; }
+        .section > .swrite:focus {background-color: red;}
+        span:active + span.swrite { background-color: black; }
+        
+    </style>
+</head>
+<body>
+	<div id="wrap">
+		<nav>
+		    <ul>
+		        <li><a href="#quiz01">1번 문제로 이동</a></li>
+		        <li><a href="#quiz02">2번 문제로 이동</a></li>
+		        <li><a href="#quiz03">3번 문제로 이동</a></li>
+		        <li><a href="#quiz04">4번 문제로 이동</a></li>
+		    </ul>
+	    </nav>
+	    <div>
+	    	<img src="quiz.png" width="100%" height="250px">
+	    </div>
+	    <hr>
+	    <h2>정답 확인 클릭시 정답 보여짐</h2>
+	    <hr>
+	    <section class="section">
+	    	<h2><a id="quiz01" style="color:green;">문제 1) 정적 언어는?</a></h2>
+	    	<span>정답 작성</span><input type="text">
+	    	<span>정답 클릭 확인</span>
+	    	<span class="swrite">html, javascript, css 등</span>
+	    	<hr>
+	    	<h2><a id="quiz02" style="color:blue;">문제 2) 서버 사이드 언어는?</a></h2>
+	    	<span>정답 작성</span><input type="text">
+	    	<span>정답 클릭 확인</span>
+	    	<span class="swrite">jsp, django, php 등</span>
+	    	<hr>
+	    	<h2><a id="quiz03" style="color:red;">문제 3) 프로그래밍 언어는?</a></h2>
+	    	<span>정답 작성</span><input type="text" name="quiz03">
+	    	<span>정답 클릭 확인</span>
+	    	<span class="swrite">java, c, python 등</span>
+	    	<hr>
+	    	<h2><a id="quiz04" style="color:pink;">문제 4) 클라이언트 사이드 언어는?</a></h2>
+	    	<span>정답 작성</span><input type="text" name="quiz04">
+	    	<span>정답 클릭 확인</span>
+	    	<span class="swrite">html, javascript, css 등</span>
+	    	<hr>
+	    </section>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
