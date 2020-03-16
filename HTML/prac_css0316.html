@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="utf-8">
+<title>오후시간 실습 파일</title>
+<style type="text/css">
+	* { background-color: pink; }
+	.th {background-color: red; font-size: 24px; width: 200px; height: 100px; color: white; border-color: red;}
+	
+	.th:hover {width: 200px; height: 100px; color:white; background-color: gray; border-color: gray;
+				 opacity: 1; transition: all 0.1s Linear 0s;}
+	.div {background-color: red; font-size: 24px; width: 200px; height: 80px; color: white; border-color: red;
+		    text-align:center;  margin-left: 10px; padding-top: 50px;}
+	.div:hover {width: 200px; color:white; background-color: gray; border-color: gray;
+				 opacity: 1; transition: all 0.1s Linear 0s;}
+				 
+	a {text-decoration:none; background-color: inherit; font-size: 24px; width: 200px; height: 100px; color: white; border-color: red;}
+	a:hover {text-decoration: blink; color:white; background-color: inherit; color:white;
+				 opacity: 1; transition: all 0s Linear 0s;}
+</style>
 </head>
 <body>
-
+	<table>
+		<tr> <th class="th"> <a href="#">Home</a> </th> </tr>
+		<tr> <th class="th"> <a href="#">Profile</a> </th> </tr>
+		<tr> <th class="th"> <a href="#">Board</a> </th> </tr>
+		<tr> <th class="th"> <a href="#">Contact</a> </th> </tr>
+	</table>
+	<hr>
+	<div class="div"> <a href="#">Home</a> </div>
+	<div class="div"> <a href="#">Profile</a> </div>
+	<div class="div"> <a href="#">Board</a> </div>
+	<div class="div"> <a href="#">Contact</a> </div>
+	<hr>
 </body>
 </html>
