@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="utf-8">
+<title>css 연습용 파일</title>
+	<style type="text/css">
+	/* 주석 처리 	*/
+	
+	 *{		color: gray;		font-size: 30px;	} 
+	
+	h1 {background-color: red;}
+	h2 {background-color: green;}
+	p {color: cyan;}
+	
+	/* *{} 모든 값에 대해서 설정 값을 적용하겠다. */
+	
+	.class1{color:blue; background-color: yellow;}
+	.class2{color:red; background-color: green;}
+	p.class1{color:navy; background-color: aqua;}
+	
+	#id1 {color:blue; background-color: yellow;}
+	#id2 {color:red; background-color: green;}
+	p#id1 {color:navy; background-color: red;}
+	
+	a:link {color:pink; text-decoration: none;}
+	a:visited {color: red;}
+	a:hover {text-decoration: overline; color: black;}
+	a:active {background-color: yellow;}
+	
+	.div1 {width: 200px; height: 200px; color: blue; background-color: green; opacity: 0.9;}
+	.div1:hover {width: 400px; height: 50px; color: red; background-color: aqua;
+				 opacity: 0.5; transition: all 0.5s Linear 1.5s;}
+				 /* linear : 시작시간, all : 변환하는 전체 시간 */
+	.div2 ul {color:blue; font-size: 18px;}
+	.div2 ul li {color:red; font-size: 14px; padding: 10px;}
+	.div2 .h2 {background-color: purple;}
+	
+	.div3 {overflow:auto; background-color: blue; height: 100px;}
+	/* overflow:hidden; div3을 넘어서는 내용에 대해서는 감추겠다라는 속성의 값이다. */
+	/* overflow:auto; div3을 넘어서는 내용에 대해서는 스크롤을 생성해서 확인할 수 있게 하는 속성의 값이다. */
+	.div3 div{background-color: yellow; width:200px; height: 200px;}
+	</style>
 </head>
 <body>
+<hr>
+<h1 >css스타일 (HEADER) 이 적용된 경우<br></h1>
+<h2 >css스타일 (HEADER) 이 적용된 경우<br></h2>
+<hr>
+<h1 style="background-color: pink; color:blue;">css 스타일에 한번 더 적용된 상황<br></h1>
+<h1 class="class1">css 스타일에 한번 더 적용된 상황<br></h1>
+<h2 class="class2">css 스타일에 한번 더 적용된 상황<br></h2>
+<p class="class1">css 스타일에 한번 더 적용된 상황<br></p>
+<hr>
+<h1 id="id1"> id값으로 스타일을 적용하는 css 스타일</h1>
+<h2 id="id2"> id값으로 스타일을 적용하는 css 스타일</h2>
+<p id="id1"> id값으로 스타일을 적용하는 css 스타일</p>
+<hr>
+<p><a href="#"> [맨 위로 가기]</a> : 마우스 이벤트에 따른 링크 변화 </p>
+<p><a href="#"> [맨 위로 가기]</a> : 마우스 이벤트에 따른 링크 변화 </p>
+link : 웹 문서에서 사용자가 방문하지 않았던 곳을 표시한다.<br>
+visited : 웹 문서에서 사용자가 방문한 곳을 표시한다.<br>
+hover : 웹 문서에서 사용자가 링크에 마우스 포인터를 올리는 순간을 나타낸다.<br>
+active : 웹 문서에서 사용자가 링크를 클릭하는 순간을 나타낸다.<br>
+<hr>
+<h2> 가상 선택자</h2>
+<div class="div1">
+<font style="font-size: 10px">
+	가상 클래스를 이용한 애니메이션 효과<br>
+	마우스가 위에 있으면 박스가 늘어나요.
+	</font>
+</div>
+<hr>
+<h2 class="h2">후손 선택자</h2>
+<div class="div2">
+	<h2 class="h2">후손 선택자</h2>
+	<ul>
+		값
+		<li>후손 선택자</li>
+		<li style="list-style: none;">후손 선택자  : 앞에 있는거 삭제</li>
+		<li style="display: inline;">후손 선택자  : 가로로 나열</li>
+	</ul>
+</div>
+<hr>
+<div class="div3"> hello
+	<div>	css	</div>
+</div>
+<h1> 다음 내용 </h1>
+
 
 </body>
 </html>
