@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>���Ľð�</title>
+<meta charset="utf-8">
+<title>오후시간</title>
+	<style type="text/css">
+		#wrap { display: flex; flex-flow:column; width:400px; height: 400px; margin: 0 auto; border: 2px solid black; text-align: center;}
+		#rowp { display: flex; flex-flow:row; margin: 0 auto; border: 2px black; text-align: center; width:100%; height: 60%;}
+		div{width:33.33%; border: 1px solid black;}
+		.divhead{width:100%; height: 20%; background-color: red;}
+		.divend{width:100%; height: 20%; background-color: pink; }
+		.div01{order:1; background: yellow; width: 15%;}
+		.div02{order:2; background: lime; width: 65%;}
+		.div03{order:3; background: yellow; width: 20%;}
+		#subp { display: flex; flex-flow:column; margin: 0 auto; border: 1px black; text-align: center; width:100%; height: 60%; position: relative; margin-top: -5%;}
+		.subh{order:1; background: aqua; width: 80%; height: 35%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 2px solid black;}
+		.suba{order:2; background: yellow; width: 80%; height: 35%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 2px solid black;}
+		.subf{order:3; background: pink; width: 80%; height: 35%; margin-left: 10%; margin-right: 10%; margin-top: 5%; border: 2px solid black;}
+		/* display가 flex인 경우 order로 순서 지정을 할 수 있다.  */
+		/* flex-flow:row; 가 기본 설정값이며, 설정을 따로 지정하여 column으로 설정이 가능하다 */
+	</style>
 </head>
 <body>
-
+<table style="margin-left: 50px; table-layout: ">
+<tr><td>
+	<div id="wrap">
+		<div class="divhead"><h1>< HEADER ></h1></div>
+		<div id="rowp">
+			<div class="div01"><h1>nav</h1></div>
+			<div class="div02"><h1>section</h1>
+				<div id="subp">
+					<div class="subh">header</div>
+					<div class="suba">article</div>
+					<div class="subf">footer</div>
+				</div>
+			</div>
+			<div class="div03"><h1>aside</h1></div>
+		</div>
+		<div class="divend"><h1>< footer > </h1></div>
+	</div>
+</td><td><hr style="width: 100px; border: white;"></td><td>
+	<div id="wrap">
+		<div class="divhead"><h1>< header ></h1></div>
+		<div style="width:100%; height: 15%; background-color: yellow;"><h2>< nav ></h2></div>
+		<div id="rowp">
+			<div class="div02" style="width:70%;"><h3>section</h3>
+				<div id="subp" style="height: 50%;">
+					<div class="subh" style="height: 20%; background-color: pink;">header</div>
+					<div class="suba" style="height: 20%; background-color: pink;">article</div>
+					<div class="subf" style="height: 20%; background-color: pink;">footer</div>
+				</div>
+			</div>
+			<div class="div03" style="width:30%; background-color: aqua;"><h1>aside</h1></div>
+		</div>
+		<div class="divend"><h1>< footer > </h1></div>
+	</div>
+</td></tr>
+</table>
 </body>
 </html>
