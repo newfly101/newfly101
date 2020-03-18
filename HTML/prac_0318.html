@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
+	<style type="text/css">
+	body {font-weight: bold; font-size: 12pt; background: gray;}
+	.span1 {background: yellow; position: relative; top: 5px;}
+	.span2 {background: red; left: 10px;}
+	.span3 {background: pink; position: relative; top: -5px;}
+	div { background: skyblue;}
+	/* span에 대한 position 값은 static relative absolute 등 이있다 */
+	</style>
 </head>
 <body>
-
+	<div style="background-color: green;"> position </div>
+	<span class="span1"> sapn1 </span>
+	<span class="span2"> sapn2 </span>
+	<span class="span3"> sapn3 </span>
+	<div> 기본 값은 static 입니다.</div>
 </body>
 </html>
