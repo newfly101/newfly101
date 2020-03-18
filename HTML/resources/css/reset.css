@@ -14,7 +14,7 @@ background:transparent;
 /*body 태그에 폰트 속성과 배경 속성 그리고 글자 행간 속성을 설정 한다.*/
 body{
 font-family:NanumGothic,나눔고딕,'Nanum Gothic','맑은 고딕',HelveticaNeue,DroidSans,Sans-serif,Helvetica;
-background:url(../resources/images/body_bg.png);
+background:url(../images/s_images/body_bg.png);
 line-height:1;
 }
 /*html5 태그들이 정상적으로 작동하도록 display속성의 값을 block로 설정한다.*/

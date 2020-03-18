@@ -4,17 +4,33 @@
 <meta charset="utf-8">
 <title>맛집탐방 이야기</title>
 <style type="text/css">
-	div {margin-left: 15%; margin-right: 15%;}
+	font {font-family: 휴먼편지체;}
+	#div {width: 80%; margin-left: 10%; margin-right: 10%;}
 	.img1 {position: relative; width: 100px; height: 100px;}
 	/* top100이미지 */
-	.img2 {}
-	.img3 {}
-	.img4 {}
+	.img2 {position: relative; width: 100px; height: 120px;}
+	.img3 {position: relative; width: 100px; height: 120px;}
+	.img4 {position: relative; width: 80px; height: 80px;}
 	/* columset 1,2,3 */
+	#wrap { display: flex; flex-flow:column; width:400px; height: 400px; margin: 0 auto; text-align: center;}
+	#rowp { display: flex; flex-flow:row; margin: 0 auto; text-align: center; width:100%; height: 60%;}
+		.divhead{width:100%; height: 20%; background-color: red;}
+		.divend{width:100%; height: 20%; background-color: pink; }
+		.div01{order:1; background: yellow; width: 20%; margin:0 auto;}
+		.div02{order:2; background: lime; width: 50%; margin:0 auto;}
+		.div03{order:3; background: yellow; width: 40%; margin:0 auto;}
+		#subp { display: flex; flex-flow:column; margin: 0 auto; text-align: center; width:100%; height: 60%; position: relative; margin-top: -10%;}
+		.subcol {order:1; background-color: aqua; width: 80%; text-align: left; margin-left: 30px;}
+		.subh{position: relative; order:1; background: aqua; width: 80%; height: 35%;  margin-top: 10%;  margin-left: 30px; text-align: left;}
+		.suba{position: relative; order:2; background: yellow; width: 80%; height: 35%; margin-top: 10%; margin-left: 30px; text-align: left;}
+		.subf{position: relative; order:3; background: pink; width: 80%; height: 35%;  margin-top: 10%; margin-left: 30px; text-align: left;}
+		/* display가 flex인 경우 order로 순서 지정을 할 수 있다.  */
+		/* flex-flow:row; 가 기본 설정값이며, 설정을 따로 지정하여 column으로 설정이 가능하다 */
 </style>
 </head>
 <body>
-<div>
+<div id="div">
+
 <!-- 첫번째 제목 부분 구성 div로 구현해서 나누고 세부속성 span으로 구분해준다. -->
 <div style="background-color: cyan;">
 	<span style="background-color: yellow;">
@@ -25,13 +41,84 @@
 	</span>
 </div>
 <!-- home 게시판 내정보 태그 넣을 공간 -->
-<div style="background-color: gray; ">
+<div style="background-color: gray; margin-top: 5px; margin-bottom: 5px;">
 	<font style="font-size: 16pt; font-family: 휴먼편지체; margin-left: 60px; padding: 20px; color: white;">
 		HOME &nbsp; &nbsp; 게시판 &nbsp; &nbsp; 내정보
 	</font>
 </div>
-
-
+<!-- 내용 넣을 공간 -->
+		<div id="rowp">
+			<div class="div01">
+			<div>
+				<span style="background-color: red;">
+					<img class="img2" src="C:\Users\itbank\git\newfly1010316\HTML\resources\images\l_정우성.jpg">
+				</span>
+			</div><div>
+				<span style="background-color: red;">
+					<img class="img3" src="C:\Users\itbank\git\newfly1010316\HTML\resources\images\맛집02.jpg">
+				</span>
+			</div>
+			</div>
+			
+			<div class="div02"><h1 style="font-family: 휴먼편지체; text-align: left; margin-left: 30px">< 오늘의 맛집 ></h1>
+				<div id="subp">
+					<div class="subh">
+						<span>
+							<font>오늘 방문한 곳은 맛있는 음식이 나오는 집</font>
+						</span>
+					</div>
+					<div class="subh">
+						<span>
+							<font>오늘 방문한 곳은 맛있는 음식이 나오는 집</font>
+						</span>
+					</div>
+					<div class="subh">
+						<span>
+							<font>오늘 방문한 곳은 맛있는 음식이 나오는 집</font>
+						</span>
+					</div>
+					
+				</div>
+			</div>
+			<div class="div03">
+				<div style="margin-left:85px;" >
+					<table style="background-color: gray;">
+							<tr>
+								<td>
+								<input type="text" style="width: 100px;"> 
+								</td>
+								<td colspan="2" rowspan="2">
+								<button type="submit" value="로그인" style="width: 70px; height: 50px;">
+									로그인
+								</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<input type="text" style="width: 100px;"> 
+								</td>
+							</tr>
+						</table>
+				</div>
+				<div id="rowp">
+				<span style="width: 85px; display: flex; flex-flow: column; background-color: cyan;">
+					<img src="C:\Users\itbank\git\newfly1010316\HTML\resources\images\맛집01.jpg" width="80px" height="80px">
+					<img src="C:\Users\itbank\git\newfly1010316\HTML\resources\images\맛집02.jpg" width="80px" height="80px">
+					<img src="C:\Users\itbank\git\newfly1010316\HTML\resources\images\맛집03.jpg" width="80px" height="80px">
+				</span>
+				<span style="text-align: left;">
+						회원가입 / ID/PW찾기<br><br>
+						
+						오늘의 뉴스<br>
+						
+						날씨<br>
+						미세먼지<br>
+						운세<br>
+				</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 </body>
