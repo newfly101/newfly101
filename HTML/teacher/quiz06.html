@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+/* 기본 CSS */
+
+#wrap { display: flex; flex-flow: column; margin: 0 auto;
+		width: 80%; max-width: 900px;  }
+/* 헤더 영역 CSS*/
+.header { order: 1; display: flex; }
+.header_img { order: 1; width: 70px; height: 70px; }
+.title { order: 2; }
+/* 네비게이션 CSS */
+.nav { order: 3; }
+.nav li { list-style: none; padding: 30px 0 0 30px; }
+.nav a { text-decoration: none; color: #000; font-size:1.5em; }
+/* 섹션 영역 CSS */
+.section{ order:3; }
+.section img{ width:100%; height:200px; }
+.left_position { font-size:2.0em;}
+.float_left{ font-size: 1.5em; }
+.infomation{order:4;}
+.infomation img{ width:100%; height:200px;}
+.infomation h3{font-size: 2.0em;}
+
+.main_login {visibility: hidden; }
+.member{visibility: hidden;}
+.footer { order:5; height:20%; }
+/* pc CSS */
+@media all and (min-width:700px) {
+	#wrap {  position: relative; width: 80%; min-width: 790px; }
+	/* 헤더 영역 CSS*/
+	.header { height: 110px; }
+	.header_img { order: 1; width: 100px; height: 100px;
+		box-shadow: 5px 5px 10px #000; }
+	.title i { font-size: 1.5em; padding-left: 100px; }
+	/* 네비게이션 CSS */
+	.nav { order: 2; height: 50px; }
+	.nav ul { height: 60%; background-color: #666; padding-top: 5px; }
+	.nav li { display: inline; text-align: center; }
+	.nav a { color: #fff;font-size:1.0em; }
+	.nav a:hover { background-color: #fff; color: #cc33cc; }
+	.nav .login{ visibility: hidden; }
+	/* 섹션 영역 CSS */
+	.section{ order:3; display:flex; height:400px;}
+	.section img{ width:100px; height:100px;}
+	.laside {  order:1;display:flex; flex-flow:column;
+	 	       width:100px; margin-left: 0; }
+    .left_position {  position:relative; text-align:center; 
+    			top:-100px; font-size:1.0em;}
+    
+    .infomation{order:2; display:flex; flex-flow:column; }
+    .float_left{ float:left; font-size: 1.0em; }
+    .infomation img{ width:50px;height:50px;}
+    .infomation h3{font-size: 1.3em;}
+    
+
+    .rsection {  order:3;display:flex; flex-flow:column;
+    			box-sizing:border-box; overflow:hidden;
+                 margin:0 auto; width:30%; height:300px; }
+    .main_login { order:1; display:flex; width:250px; height:70px; 
+     	margin-top:10px; visibility:visible;}
+    .button{height:100%; width:60px;}
+    .member { order:2; width:200px; height:20%;visibility:visible;}
+    .news{ order:3; margin-top:-40px;  }
+    .footer { order:4; height:20%; margin-top:-150px;}
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<header class="header">
+			<img class="header_img" src="resources/images/맛집.png">
+			<h2 class="title"><i>맛집탐방 이야기^^</i></h2>
+		</header>
+		<nav class="nav">
+        	<ul>
+        		<li class="login"><a href="#" class="a">로그인</a></li>
+        		<li><a href="#" class="a">HOME</a></li>
+        		<li><a href="#" class="a">게시판</a></li>
+        		<li><a href="#" class="a">내정보</a></li>
+        	</ul>
+        </nav>
+        <section class="section">
+	        <figure class="laside">
+				<img src="resources/images/l_정우성.jpg">
+				<img src="resources/images/l_aside.gif">
+				<figcaption class="left_position" >
+					<b>맛집 장터</b><br>맛집 이야기 시작 합니다.
+				</figcaption>
+			</figure>
+			<section class="infomation">
+        		<h3>< 오늘의 맛집 ></h3>
+	            <div>
+	            	<div class="float_left" style="width:80%; align:left;">
+	            		오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img src="resources/images/맛집01.jpg">
+	            </div>
+	            <div>
+	            	<div class="float_left" style="width:80%; align:left;">
+	            		오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img src="resources/images/맛집02.jpg">
+	            </div>
+	            <div>
+	            	<div class="float_left" style="width:80%; align:left;">
+	            		오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img src="resources/images/맛집03.jpg">
+	            </div>
+        	</section>
+        	<section class="rsection">
+		        <div class="main_login">
+		        	<div style="width:70%; height:50%;">
+			            <input style="height:80%; width:200px;" type="text">
+			            <input style="height:80%; width:200px;" type="text">
+		            </div>
+		            <button class="button">로그인</button>
+		        </div>
+		        <div class="member">
+		        	<a href="#">회원가입</a> / <a href="#">ID/PW찾기</a>
+		    	</div>
+		    	<div class="news">
+		    		<h3><b>오늘의 뉴스</b></h3>
+		    		날씨 : -32도<br>
+		    		미세먼지 : 농도심함<br>
+		    		운세 : 누구 보다 좋음<br>
+		    	</div>
+		    	
+        	</section>
+        	
+        </section>
+     	 <footer class="footer">
+        <hr>
+        <small>
+            &nbsp;&nbsp;  <spen style="color:green"><i><b>CARE LAB</b></i></spen><i>
+             Copyright &copy; AllRights Reserved</i> &nbsp;&nbsp;
+            &nbsp;&nbsp; &reg; 1999 | 회사소개 | TEL : 777-777
+        </small>
+        </footer>
+	</div>
+</body>
+</html>
+

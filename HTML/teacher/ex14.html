@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css"></link>
+	<style type="text/css">
+		/*기본 CSS 및 모바일*/
+		#wrap{ display: flex; flex-flow:column; margin: 0 auto;
+			background-color: green; width: 80%; max-width: 1200px; }
+			/*인포메이션 영역 css*/
+		.info_section{order:1; width:100%; background-color:steelblue;}
+			.info_list{display: flex;}
+			.info_list li{width:25%; text-align:center;}
+			.info_list li a{display:block; padding:15px 0;}
+			/*헤더 영역 css*/
+		.header{ order:2; display: flex; flex-flow:column; width: 100%; }
+		.title{ width: 100%; padding:30px 0; text-align:center;
+					background-color:#1993a8; font-size: 2.0em; }
+			/*네비게이션 css*/
+		.nav{order:3; width:100%;}
+		.nav ul li{ height:50px; background-color: steelblue;}
+		.nav ul li a{  padding:20px 0; font-size:2.0em; font-weight:bold;}
+			/* 섹션 영역 css*/
+		.section{order:4; display: flex; flex-flow: column;}
+		.section_image{order:1; width:100%; height:300px;
+					background:url(resources/images/img.jpg) center;}
+			/*섹션 영역 아래*/
+	.section_news{order:5; width:100%; height:300px; background:#cc723d;}
+	.section_news .div{width:50%; font-size:1.5em; letter-spacing:10.5px;
+		line-height:30px; padding-left: 35%; padding-top: 10px;}
+			/* footer 영역*/
+		.footer{ order:6; text-align:center; width:100%; 
+			background:#474747; }
+		.footer p{ padding: 20px; font-size: 1.5em; color:#fff; }
+
+		/*PC 용 CSS */
+		@media all and (min-width:960px){
+		#wrap{  position: relative; background-color: pink; width:80%; }
+			/*인포메이션 영역 css*/
+		.info_section{ order:1; position: absolute; top:30px;
+			right: 30px; z-index:1; width:180px;}
+		.info_list li a{display: block; padding: 15px 15px;}
+			/*헤더 영역 css*/
+		.header{display: flex; flex-flow: row; 
+				background-color:steelblue; }
+		.title{ width: 12%; font-size:1.5em; background-color: steelblue;}
+			/*네비게이션 css*/
+		.nav{ align-items:center; padding-top: 40px; }
+		.nav ul {display:flex; width:100%;}
+		.nav ul li a{width:70%; font-size:1.0em; padding:0 0 0 40px; }
+			/* 섹션 영역 css*/
+		.section{ order:2; display:flex; flex-flow:row;}
+		.section_image{order:1; width:50%; height:300px; }
+			/*섹션 오른쪽 영역*/
+	.section_news{order:2; width:50%; height:300px; background:#cc723d;}	
+	.section_news h1{width:100%; background: #cc9966;}
+	.section_news .div{font-size:1.0em;}
+			/*footer 영역*/
+		.footer{order:3;}
+		.footer p{font-size: 1.0em; }
+		}
+	</style>
+</head>
+<body>
+<!-- 모바일용 : 320px, 테블릿용 : 768px, pc : 960 또는 1024px -->
+   <div id="wrap">
+    <section class="info_section">
+	 <ul class="info_list">
+      <li><a href=""><img src="resources/images/info_icon_01.png"></a></li>
+      <li><a href=""><img src="resources/images/info_icon_02.png"></a></li>
+      <li><a href=""><img src="resources/images/info_icon_03.png"></a></li>
+      <li><a href=""><img src="resources/images/info_icon_04.png"></a></li>
+	 </ul>
+    </section>
+    <header class="header">
+    	<h1 class="title"><a href="#">Test Browser</a></h1>
+    	<nav class="nav">
+    		<ul>
+    			<li><a href="#">홈</a></li> <li><a href="#">회사소개</a></li>
+    			<li><a href="#">게시판</a></li> <li><a href="#">고객정보</a></li>
+    		</ul>
+    	</nav>
+    </header>
+    <section class="section">
+    	<article class="section_image"></article>
+    	<article class="section_news">
+    		<h1 class="title">뉴스 토픽</h1>
+    		<ul class="div">
+    			<li><a href="">코로나</a></li> <li><a href="">신천지</a></li>
+    			<li><a href="">이태리</a></li> <li><a href="">저녁</a></li>
+    		</ul>
+    	</article>
+    </section>
+    <footer class="footer">
+    	<p>copyright&copy; CARE LAB</p>
+    </footer>
+   </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
