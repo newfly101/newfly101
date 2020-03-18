@@ -10,6 +10,16 @@
 	.span3 {background: pink; position: relative; top: -5px;}
 	div { background: skyblue;}
 	/* span에 대한 position 값은 static relative absolute 등 이있다 */
+	.sp { position: static; left: 30px; background-color: cyan; width: 400px; height: 50px;}
+	.rp1 { position: fixed; right: 30px; top: 10px; background-color: orange; width: 400px; height: 50px;}
+	.rp2 { position: absolute; right: 60px; top: 20px; background-color: litegreen; width: 400px; height: 50px;}	
+	
+	/* 다른 예제 */
+	.img1 {position: absolute; z-index: 0; left: 550px; top:500px;}
+	.h1 {position: static; z-index: -1;}
+	.p1 {position: fixed; z-index: 1; color: blue;}
+	.h {position: static; left: 0px; top:0px; width: 200px;}
+	.h4 {position: static; left: 0px; top:0px;}
 	</style>
 </head>
 <body>
@@ -18,5 +28,56 @@
 	<span class="span2"> sapn2 </span>
 	<span class="span3"> sapn3 </span>
 	<div> 기본 값은 static 입니다.</div>
+	<hr>
+	<h1>position style</h1>
+	<p class="sp">정적 위치 설정 적용 </p>
+	<div class="rp1">고정 위치 설정  right30px, top-10px</div>
+	<p class="rp2">절대 위치 설정 적용 right60px, top20px</p>
+	<p class="sp">정적 위치 설정 적용</p>
+	<p class="sp">정적 위치 설정 적용</p>
+	
+	<fieldset style="background-color: white; border-color: cyan; width:600px; ">
+	<legend style="background-color: white; border-color: cyan; border: 1px bold;">절대 위치 </legend>
+	- 웹 문서의 흐름과 상관없이 전체 페이지를 기준으로 배치<br>
+	</fieldset>
+	<fieldset style="background-color: white; border-color: cyan; width:600px; ">
+	<legend style="background-color: white; border-color: cyan; border: 1px bold;">고정 위치 </legend>
+	- 창의 스크롤을 뭉직여도 사라지지 않고 고정된 위치에 그대로 있음<br>
+	</fieldset>
+	
+	<hr>
+	<fieldset style="background-color: white; border-color: cyan; width:600px; ">
+	<legend style="background-color: yellow; border-color: cyan; border: 1px bold;"> z-index Property </legend>
+	-  화면 앞뒤로 보내는 겹치는 부분에 대해 순번을 정함<br>
+	<p class="p1"><b>z-index설정은 position이 설정되어 있는 상태에서 가능하다</b></p>
+	</fieldset>
+	<h4 class="h4"><a href="#">클릭시 이동</a></h4>
+	<h2 class="h">. . . . </h2>
+	<h1 class="h1">The z-index Property</h1>
+	<img class="img1" src="0001.jpg" width="100" height="140">
+	<p class="p1"><b>z-index설정은 position이 설정되어 있는 상태에서 가능하다</b></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 </body>
 </html>
