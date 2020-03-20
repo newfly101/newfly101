@@ -43,9 +43,21 @@
 	function textvisible(){
 		document.getElementById("msg").style.visibility="visible";
 	}
+	function removeAll(){
+		test = document.getElementById("text");
+		test.innerHTML="";
+	}
 	</script>
 </head>
 <body onload="insertOpt()">
+	<div id="text">
+		<h1>안녕하세요</h1>
+		<h2>모든 태그가 없애기</h2>
+		<h3>아래 버튼 클릭</h3>
+	</div>
+	<button type="button" onclick="removeAll()">클릭</button>
+	
+<hr>
 	<p id="msg"> 문서 객체 스타일 변경하기</p>
 	<input type="button" onclick="textStyle()" value="텍스트 스타일 변경">
 	<input type="button" onclick="texthidden()" value="텍스트 숨기기">

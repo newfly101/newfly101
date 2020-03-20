@@ -12,7 +12,7 @@
 		function mOut(obj) { obj.innerHTML = "Mouse Over Me"}
 	</script>
 </head>
-<body>
+<body onload="rollImg()">
 
 <!-- 마우스 이동해서 값 처리하는 것
 	<div class="div" onmouseover="mOver(this)" onmouseout="mOut(this)"> Mouse Over me</div>
@@ -47,17 +47,17 @@
 
 
 <div id="rowp">
-	<div style="margin-top: 180px;">
+	<div style="margin-top: 180px;" onmouseover="stopImg()" onmouseout="rollImg()">
 		<span>
-			<img src="../resources/images/왼쪽화살표.jpg" style="width: 50px; height: 70px;" onclick="">
+			<img src="../resources/images/왼쪽화살표.jpg" style="width: 50px; height: 70px;" onclick="leftbutton()">
 		</span>
-	</div><div>
+	</div><div onmouseover="stopImg()" onmouseout="rollImg()">
 		<span>
 			<img src="../resources/images/최근상품01.jpg" style="width: 300px; height: 400px;" id="pictur">
 		</span>
-	</div><div style="margin-top: 180px;">
+	</div><div style="margin-top: 180px;" onmouseover="stopImg()" onmouseout="rollImg()">
 		<span>
-			<img src="../resources/images/오른쪽화살표.jpg" style="width: 50px; height: 70px;">
+			<img src="../resources/images/오른쪽화살표.jpg" style="width: 50px; height: 70px;" onclick="rightbutton()">
 		</span>
 	</div>
 </div>
@@ -65,28 +65,28 @@
 		
 	
 	<script>
-	var e;
-	var newImage= new Array();
-	newImage[0] = "<img src='../resources/images/최근상품01.jpg'>";
-	newImage[1] = "<img src='../resources/images/최근상품02.jpg'>";
-	newImage[2] = "<img src='../resources/images/최근상품03.jpg'>";
-	newImage[3] = "<img src='../resources/images/최근상품04.jpg'>";
-	newImage[4] = "<img src='../resources/images/최근상품05.jpg'>";
-	newImage[5] = "<img src='../resources/images/최근상품06.jpg'>";
-	newImage[6] = "<img src='../resources/images/최근상품07.jpg'>";
-	newImage[7] = "<img src='../resources/images/최근상품08.jpg'>";
-	var cnt=0;
-	function imgChange() {
-		while(true){
-			document.getElementById("pictur").innerHTML = newImge[cnt];
-			cnt++;
-			if(cnt>7){	cnt=0;	}
-			document.write(newImage[cnt]);
-		}
-		e= setTimeout('imgChange()',1000);	
-		
+	var imgArr = ["최근상품01","최근상품02","최근상품03","최근상품04","최근상품05","최근상품06","최근상품07","최근상품08"];
+	var stop;
+	var cnt = 0;
+	function rollImg(){
+		if(cnt==imgArr.length-1) cnt = 0;
+		else cnt = cnt + 1;
+		document.getElementById("pictur").src="../resources/images/"+imgArr[cnt]+".jpg";
+		stop = setTimeout("rollImg()", 1000);
 	}
-	imgChange();
+	function stopImg(){
+		clearTimeout(stop);
+	}
+	function leftbutton(){
+		if(cnt==0) cnt=imgArr.length-1;
+		else cnt = cnt - 1;
+		document.getElementById("pictur").src="../resources/images/"+imgArr[cnt]+".jpg";
+	}
+	function rightbutton(){
+		if(cnt==imgArr.length-1) cnt=0;
+		else cnt = cnt + 1;
+		document.getElementById("pictur").src="../resources/images/"+imgArr[cnt]+".jpg";
+	}
 	</script>
 </body>
 </html>

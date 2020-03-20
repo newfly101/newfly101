@@ -3,8 +3,58 @@
 <head>
 <meta charset="utf-8">
 <title>select pick</title>
+<style type="text/css">
+	img {width: 100px; height: 120px;}
+	font {style="font-size: 16pt;"}
+	.rp1 {flex-flow: column; display: flex; position: fixed; right: 30px; top: 10px; background-color: orange; width: 100px; height: inherit;}
+	.divc {flex-flow: column; display: flex; background-color: white; width: 100px; height: 100px;}
+</style>
+<script type="text/javascript">
+
+var imgArr=[];
+const imgSize=5;
+function addImg(name){
+	if(imgArr.length==0){
+		nameCard();
+	}
+	img = document.createElement('img');
+	img.src = "../resources/images/최근상품0"+name+".jpg";
+	img.setAttribute('width', 100);
+	img.setAttribute('height', 120);
+	document.getElementById('selectImg').appendChild(img);
+}
+function nameCard(){
+		listTag = document.getElementById('textId');
+		listTag.innerHTML="<font>최근 구경한<br>상품</font>";
+		listTag.style.background="green";
+}
+
+</script>
 </head>
 <body>
-
+<div>
+	<span>
+	<table style="border-color: black; margin-left: 20%;" border="1">
+	<tr>
+	<td><a href="#" onclick="addImg('1')"><img src="../resources/images/최근상품01.jpg"></a></td>
+	<td><a href="#" onclick="addImg('2')"><img src="../resources/images/최근상품02.jpg"></a></td>
+	<td><a href="#" onclick="addImg('3')"><img src="../resources/images/최근상품03.jpg"></a></td>
+	<td><a href="#" onclick="addImg('4')"><img src="../resources/images/최근상품04.jpg"></a></td>
+	</tr>
+	
+	<tr>
+	<td><a href="#" onclick="addImg('5')"><img src="../resources/images/최근상품05.jpg"></a></td>
+	<td><a href="#" onclick="addImg('6')"><img src="../resources/images/최근상품06.jpg"></a></td>
+	<td><a href="#" onclick="addImg('7')"><img src="../resources/images/최근상품07.jpg"></a></td>
+	<td><a href="#" onclick="addImg('8')"><img src="../resources/images/최근상품08.jpg"></a></td>
+	</tr>
+	</table>
+	</span>
+</div>
+<div class="rp1" style="text-align: center;" id="selectImg">
+	<span id="textId">
+	<font>목록이<br> 없습니다.</font>
+	</span>
+</div>
 </body>
 </html>
