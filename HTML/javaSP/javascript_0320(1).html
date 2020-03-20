@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	var img;
+	function add(){
+		img = document.createElement('img');
+//		img.src = '../resources/images/test1.jpg';
+//		img.width=100;
+//		img.height = 122;
+		img.setAttribute('src', '../resources/images/test1.jpg');
+		img.setAttribute('width', 100);
+		img.setAttribute('height', 122);
+//		document.body.appendChild(img);
+		document.getElementById('test').appendChild(img);
+		
+	}
+	function remove(){
+//		document.body.removeChild(img);
+		document.getElementById('test').removeChild(img);
+	}
+	function insertOpt(){
+		var insert = document.getElementById("insert");
+		var arr = ['야구','축구','배구','족구'];
+		var opt;
+		for(var i =0; i<arr.length;i++){
+			opt = document.createElement("option");
+			opt.value=arr[i];
+			opt.innerHTML=arr[i];
+			insert.appendChild(opt);
+		}
+	}
+	function textStyle(){
+		document.getElementById("msg").style.color="blue";
+		document.getElementById("msg").style.fontSize="30px";
+		document.getElementById("msg").style.fontStyle="italic";
+	}
+	function texthidden(){
+		document.getElementById("msg").style.visibility="hidden";
+	}
+	function textvisible(){
+		document.getElementById("msg").style.visibility="visible";
+	}
+	</script>
+</head>
+<body onload="insertOpt()">
+	<p id="msg"> 문서 객체 스타일 변경하기</p>
+	<input type="button" onclick="textStyle()" value="텍스트 스타일 변경">
+	<input type="button" onclick="texthidden()" value="텍스트 숨기기">
+	<input type="button" onclick="textvisible()" value="텍스트 보이기">
+
+<hr>
+	<select id="insert"></select>
+
+<hr>
+<p id="test">test</p>
+<a href="#" onclick="add()">[이미지 추가]</a>
+<a href="#" onclick="remove()">[이미지 삭제]</a><br>
+
+
+
+</body>
+</html>

@@ -3,8 +3,90 @@
 <head>
 <meta charset="utf-8">
 <title>mouse Event</title>
+	<style type="text/css">
+	#rowp { display: flex; flex-flow:row; margin: 0 auto; text-align: center; width:100%;}
+	</style>
+	
+	<script type="text/javascript">
+		function mOver(obj) { obj.innerHTML = "Thank you."}
+		function mOut(obj) { obj.innerHTML = "Mouse Over Me"}
+	</script>
 </head>
 <body>
 
+<!-- 마우스 이동해서 값 처리하는 것
+	<div class="div" onmouseover="mOver(this)" onmouseout="mOut(this)"> Mouse Over me</div>
+		<h1 onmouseover="style.color='red'" onmouseout="style.color='black'"> Mouse over this text</h1> 
+		 -->
+
+<div id="digClock01"></div>
+	<button onclick="test()">클릭</button>
+	<button onclick="click_()">시작</button>	
+	<button onclick="end()">종료</button>	<br><br><br>
+	<script>
+	// 자기 자신을 호출하는 스택 함수
+	var e; var cnt=1;
+	function click_(){
+		e = setInterval(digClock, 1000);
+	}
+	function digClock(){
+		var today = new Date();
+		var day = today.getMonth()+1 + "월" + today.getDate()+"일";
+		var time = today.getHours()+"시" + today.getMinutes()+"분"+today.getSeconds()+"초";
+		document.getElementById("digClock01").innerHTML= day + time;
+		e= setTimeout('digClock()',1000);		
+	}
+	function test(){
+		console.log("클릭클릭!!!!"+cnt++);
+	}
+	function end() {clearTimeout(e);}
+	function endc() {clearInterval(e);}
+	digClock();
+	</script>
+
+
+
+<div id="rowp">
+	<div style="margin-top: 180px;">
+		<span>
+			<img src="../resources/images/왼쪽화살표.jpg" style="width: 50px; height: 70px;" onclick="">
+		</span>
+	</div><div>
+		<span>
+			<img src="../resources/images/최근상품01.jpg" style="width: 300px; height: 400px;" id="pictur">
+		</span>
+	</div><div style="margin-top: 180px;">
+		<span>
+			<img src="../resources/images/오른쪽화살표.jpg" style="width: 50px; height: 70px;">
+		</span>
+	</div>
+</div>
+		
+		
+	
+	<script>
+	var e;
+	var newImage= new Array();
+	newImage[0] = "<img src='../resources/images/최근상품01.jpg'>";
+	newImage[1] = "<img src='../resources/images/최근상품02.jpg'>";
+	newImage[2] = "<img src='../resources/images/최근상품03.jpg'>";
+	newImage[3] = "<img src='../resources/images/최근상품04.jpg'>";
+	newImage[4] = "<img src='../resources/images/최근상품05.jpg'>";
+	newImage[5] = "<img src='../resources/images/최근상품06.jpg'>";
+	newImage[6] = "<img src='../resources/images/최근상품07.jpg'>";
+	newImage[7] = "<img src='../resources/images/최근상품08.jpg'>";
+	var cnt=0;
+	function imgChange() {
+		while(true){
+			document.getElementById("pictur").innerHTML = newImge[cnt];
+			cnt++;
+			if(cnt>7){	cnt=0;	}
+			document.write(newImage[cnt]);
+		}
+		e= setTimeout('imgChange()',1000);	
+		
+	}
+	imgChange();
+	</script>
 </body>
 </html>
