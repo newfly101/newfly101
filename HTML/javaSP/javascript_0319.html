@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>자바 스크립트</title>
+<script type="text/javascript">
+/*
+	var num = prompt("아파트 층 수 입력");
+	document.write("<table border='1'>");
+	for(;num>0;num--){
+		document.write("<tr>");
+		for(j=i;j<5;j++){
+			document.write("<td>"+(num*100+j)+"호</td>");
+		} document.write("</tr>");
+	} document.write("</table>");
+*/
+	function printMsg(name, age){
+		document.write("name : "+name+"<br>");
+		document.write("age : "+age+"<hr>");
+	}
+	function getGrade(){
+		document.write("getGrade()함수 실행 <br>");
+		let kor01=95;
+		// let : 딱 한번만 정의가 가능하고, 지역변수로 이용한다.
+		var kor=95;
+		document.write("전역 변수 kor01 : "+kor01+"<br>");
+	}
+	var kor01 = 100;
+	getGrade();
+	document.write("국어 점수 : "+kor01+"<br>");
+</script>
+</head>
+<body>
+	<button type="button" onclick="printMsg('김재홍',27)">클릭</button>
+	<h3 onclick="printMsg('김재운', 27)">클릭</h3>
+</body>
+</html>
