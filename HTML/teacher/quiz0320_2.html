@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+img{width:100px;height:100px;}
+.list {  position: fixed; right: 30px; top: 10px; width: 100px; }
+.list_title{ background:red;  } 
+</style>
+<script>
+	var arr=[];
+	const imgSize=5;
+    function display(name){
+    	if(arr.length == 0){
+    		list()
+    	}
+    	arr.push(name);
+   		rp2 = document.getElementById("rp2")
+   		if(arr.length <= imgSize){
+   			var img=document.createElement('img'); 
+	        img.src="resources/images/"+name+".jpg";
+	        rp2.appendChild(img)
+   		}else{
+   			rp2.innerHTML = ""
+   			arr.shift();
+   			for(i=0;i<arr.length;i++){
+	   			var img=document.createElement('img'); 
+	   			img.src="resources/images/"+ arr[i] +".jpg";
+	   	        document.getElementById("rp2").appendChild(img)
+   			}
+   		}
+    }
+    function list(){
+    	ls = document.getElementById("ls")
+    	ls.innerHTML="최근 구경한 상품"
+    	ls.style.background="green"
+    }
+</script>
+</head>
+<body>
+<div class="list">
+	<h3 class="list_title" id="ls" align="center">목록이<br>없습니다</h3>
+	<div id="rp2"></div>
+</div>
+    <table border='1' align="center">
+    	<tr>
+    		<td ><img onclick="display('최근상품01')"src="resources/images/최근상품01.jpg"></td>
+    		<td><a href="#" onclick="display('최근상품02')"><img src="resources/images/최근상품02.jpg"></a></td>
+    		<td><a href="#" onclick="display('최근상품03')"><img src="resources/images/최근상품03.jpg"></a></td>
+    		<td><a href="#" onclick="display('최근상품04')"><img src="resources/images/최근상품04.jpg"></a></td>
+    	</tr>
+    	<tr>
+    		<td ><a href="#" onclick="display('최근상품05')"><img src="resources/images/최근상품05.jpg"></a></td>
+    		<td><a href="#" onclick="display('최근상품06')"><img src="resources/images/최근상품06.jpg"></a></td>
+    		<td><a href="#" onclick="display('최근상품07')"><img src="resources/images/최근상품07.jpg"></a></td>
+    		<td><a href="#" onclick="display('최근상품08')"><img src="resources/images/최근상품08.jpg"></a></td>
+    	</tr>
+    </table>
+</body>
+
+</html>

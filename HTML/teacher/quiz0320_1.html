@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>겔러리</title>
+<style>
+#image{  display:flex; width:500px; height:500px;  z-index:0; }
+#pic{  width:500px;  height:400px; padding-top:50px;  z-index:-1; }
+#pic01{  position:relative; top:200px; width:100px;  height:100px;  }
+#pic02{  position:relative; top:200px; width:100px;  height:100px;  }
+</style>
+<script>
+var list=["최근상품01","최근상품02","최근상품03","최근상품04",
+		"최근상품05","최근상품06","최근상품07","최근상품08"];
+var x = 0;
+function prev(){
+	if(x == 0)  x = list.length-1;
+	else   x = x-1;
+	document.getElementById("pic").src="./resources/images/"+list[x]+".jpg";
+}
+function next(){
+	if(x == list.length-1)  x = 0;
+	else  x = x+1;
+	document.getElementById("pic").src="./resources/images/"+list[x]+".jpg";
+}
+var stopVal;
+function auto(){
+	if(x == list.length-1)  x = 0;
+	else  x = x+1;
+	document.getElementById("pic").src="./resources/images/"+list[x]+".jpg";
+	stopval = setTimeout("auto()",1000)
+}
+function stop(){  clearTimeout(stopval)  }
+</script>
+</head>
+<body onload="auto()">
+	<div id="image" onmouseover="stop()" onmouseout="auto()">
+		<img id="pic01" src="./resources/images/왼쪽화살표.jpg" onClick="prev()"/>
+		<img src="./resources/images/최근상품01.jpg" id="pic"/>
+		<img id="pic02" src="./resources/images/오른쪽화살표.jpg" onClick="next()"/>
+	</div>
+</body>
+</html>
