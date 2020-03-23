@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test(){
+		fo.submit();
+	}
+	function move_t(){
+		location.href="javascript_0323(1).html?name=홍길동"
+		// a태그와 비슷하게 페이지를 이동하겠습니다의 의미로 볼 수 있다.
+	}
+</script>
+</head>
+<body>
+	<form id="fo" action="javascript_0323(2).html">
+	이름 : <input type="text" name = "name"><br>
+	주소 : <input type="text" name = "addr"><br>
+	<input type="submit" value= "서브밋">
+	<input type="button" value="버튼" onclick="move_t()"><br>
+	</form>
+	<input type="button" value="직접값" onclick="location.href='../popup.html'"><br>
+</body>
+</html>

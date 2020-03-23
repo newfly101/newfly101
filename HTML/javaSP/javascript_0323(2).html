@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>팝업창 띄우기</title>
+<script type="text/javascript">
+	function myClick() {
+		window.open("https://www.naver.com");
+		/* 새로운 창에서 팝업창 오픈하는 것 */
+	}
+	function myClick_() {
+		window.open("https://www.naver.com","_self");
+		/* 현재 페이지에서 팝업창 오픈하는 것 */
+	}
+	function myClick_sel() {
+		window.open("https://www.naver.com","","width=500, height=500");
+		/* 팝업창 크기 지정해서 오픈하는 것 */
+	}
+	function myClick_pop() {
+		window.open("../popup.html","","width=500, height=500");
+		/* 팝업창 오픈하는 것, 팝업창 소스는 잇어야 함 */
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="새창" onclick="myClick()"><br>
+	<input type="button" value="현재페이지창" onclick="myClick_()"><br>
+	<input type="button" value="지정크기창" onclick="myClick_sel()"><br>
+	<input type="button" value="팝업창 오픈" onclick="myClick_pop()"><br>
+<hr>
+	
+</body>
+</html>

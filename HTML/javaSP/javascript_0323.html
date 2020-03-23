@@ -3,8 +3,43 @@
 <head>
 <meta charset="utf-8">
 <title>3월 4째주 월요일</title>
+<style type="text/css">
+	.wrapper{display: flex; border: 5px solid blue; width: 900px; height: 600px; margin: auto;}
+	.light {order: 1; width: 150px; height: 50%; background: pink;}
+	.room {order: 2; width: 750px; height: 100%; background-image: url("resources/images/room.jpg");}
+	.room img {width: 750px; height: 100%}
+	.light img {width: 120px;}
+	#dark { width: 100%; height: 100%; background: black; opacity: 0;}
+</style>
+<script type="text/javascript">
+	var flag=true;
+	function turnOff(){
+		var op; 		// 투명도
+		var path;		//이미지의 경로
+		flag=!flag;
+		if(flag==true){
+			op=0;
+			path="resources/images/switch_on.png";
+		}else{
+			op=0.8;
+			path="resources/images/switch_off.png";
+		}
+		// dark div의 투명도를 불투명하게 하자 (opacity 0.8)
+		document.getElementById("dark").style.opacity=op;
+		document.getElementById("sw").src = path;
+	}
+</script>
 </head>
 <body>
+<a href="javascript_0323(1).html">다음 html이동<br>
+<input type="button" value="다음 페이지" onclick="history.goForward()">
+</a>
+<div class="wrapper">
+	<div class="light">
+		<img src="resources/images/switch_on.png" id="sw" onclick="turnOff()" />
+	</div>
+	<div id="test" class="room"><div id="dark"></div></div>
+</div>
 
 </body>
 </html>

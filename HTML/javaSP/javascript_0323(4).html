@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>새로운거 </title>
+<style type="text/css">
+	#remove {display: none;}
+	#remove.a {display: block; background: green;}
+	/* id => # class => .a  display:block; 으로 지정하지 않으면 실행이 되지 않는다.*/
+</style>
+<script type="text/javascript">
+	function init(){
+		var t1 = document.getElementById('target1');
+		var t2 = document.getElementById('target2');
+		t1.addEventListener('click',btn_listener);
+		t2.addEventListener('click',btn_listener);
+	}
+	function btn_listener(event){
+		console.log(event.target.id); //onclick으로 처리를 해도 되지만 이런 다른 방법도 있다는 것을 알리기 위한 것이다.
+		switch(event.target.id){
+		case 'target1' : alert(1+' 선택 : target1'); break;
+		case 'target2' : alert(2+' 선택 : target2'); break;
+		}
+		let remove = document.getElementById("remove");
+		remove.setAttribute('class', 'a');
+	}
+	function blockRM(){
+		// 해당하는 클래스를 삭제하는 기능
+		let remove = document.getElementById("remove");
+		remove.removeAttribute('class');
+	}
+</script>
+</head>
+<body onload="init()">
+	<input type="button" id="target1" value="button1" />
+	<input type="button" id="target2" value="button2" />
+	<div id="remove">
+		<h3> 안녕하세요</h3><br>
+		<input type="button" value="되돌리기" onclick="blockRM()">
+	</div>
+	<div> <h1> 되돌리기 연습 </h1></div>
+</body>
+</html>
