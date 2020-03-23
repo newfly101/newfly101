@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quiz01</title>
+<style>
+	#remove{display: none;}
+	#remove.a{ display:block; width:100px;height:100px;
+	 		background:gold; position:absolute; left:100px; top:100px;
+		}
+	#remove.b{ display:block; width:100px;height:100px;
+	 		background:green; position:absolute; left:100px; top:100px;
+		}
+	#remove.c{ display:block; width:100px;height:100px;
+	 		background:pink; position:absolute; left:100px; top:100px;
+		}
+	#remove.d{ display:block; width:100px;height:100px;
+	 		background:red; position:absolute; left:100px; top:100px;
+		}
+</style>
+<script type="text/javascript">
+	function init(){
+		let btns = document.getElementsByClassName("btn");
+		for(i=0;i<btns.length;i++){
+			btns[i].addEventListener('click',btnTxt);
+		}
+	}
+	function btnTxt(event){
+		document.getElementById("target").innerText = 
+								"버튼 "+event.target.id+" 클릭";
+		let btn = document.querySelector('#remove');
+		if(event.target.id == 1)
+			btn.setAttribute('class','a')
+		if(event.target.id == 2)
+			btn.setAttribute('class','b')
+		if(event.target.id == 3)
+			btn.setAttribute('class','c')
+		if(event.target.id == 4){
+			console.log("클릭 4444");
+			d();
+		}
+	}
+	function closeRM(){
+		console.log('지우기 클릭')
+		let remove = document.querySelector('#remove');
+    	remove.removeAttribute('class');
+    	if(e != undefined){
+    		clearTimeout(e);
+    	}
+	}
+	var e;
+	var flag=true;
+	function d(){
+		if(flag){
+			btn = document.querySelector('#remove');
+			btn.setAttribute('class','d');
+		}else{
+			let remove = document.querySelector('#remove');
+	    	remove.removeAttribute('class');
+		}
+		flag = !flag;
+    	e = setTimeout('d()', 100);
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="remove">
+	<h3 id="target"></h3>
+	</div>
+	<button class="btn" id="1">버튼 1</button>
+	<button class="btn" id="2">버튼 2</button>
+	<button class="btn" id="3">버튼 3</button>
+	<button class="btn" id="4">자동</button>
+	<button onclick="closeRM()">지우기</button>
+</body>
+</html>

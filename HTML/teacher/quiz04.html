@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quiz01</title>
+<style>
+	.default_img{width:70px;height:50px;  }
+	#basics{ height:800px; }
+	#basics.dark{background:black; opacity:0.2; }
+	#remove{display: none;}
+	#remove.a{ display:block; width:700px;height:550px;
+	 		background:#515151; opacity:0.8; border:10px solid #754C00;
+			position: absolute; left: 200px; top: 150px;
+		}
+	#target { width:650px;height:400px; margin:10px 10px 10px 25px;}
+	#div_x{ position:absolute; top:0; right:0; text-align:center; 
+			width:30px; height:30px; color:white;  }
+	#div_x:hover { background:darkgray; }
+	#name{ text-align:center; text-shadow: aqua;}
+</style>
+<script type="text/javascript">
+	function init(){
+		var img=[];
+		let thumbImg = document.getElementsByClassName("default_img");
+		for(i=0;i<thumbImg.length;i++){
+			thumbImg[i].addEventListener('click',img_listener);
+		}
+	}
+	function img_listener(event){
+		console.log("이미지 실행 : "+event.target.id)
+		document.getElementById("target").src = "resources/images/car0" + event.target.id + ".png";
+		
+		let basics = document.querySelector("#basics")
+		basics.setAttribute('class','dark')
+		
+		let remove = document.querySelector("#remove")
+		remove.setAttribute('class','a')
+	}
+	function imgClose(){
+		let remove = document.querySelector('#remove');
+    	remove.removeAttribute('class');
+    	
+    	let basics = document.querySelector("#basics")
+		basics.removeAttribute('class');
+	}
+</script>
+</head>
+<body onload="init()"  >
+	<div id="basics">
+		<header>
+			<h1>light box</h1>
+			<img class="default_img" id="1" alt="" src="resources/images/car01.png" >
+			<img class="default_img" id="2" alt="" src="resources/images/car02.png">
+			<img class="default_img" id="3" alt="" src="resources/images/car03.png">
+		</header>
+	</div>
+	<div id="remove">
+		<div align="right" style="font-size: 15pt;">
+			<div id="name"><h3 style="color:#BDAE24;">2 0 1 9 &nbsp;Super_Car </h3></div>
+			<div id="div_x" onclick="imgClose()">x</div>
+			<hr>
+		</div>
+		<img id="target" alt=""  >
+	</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quiz01</title>
+<style>
+	#wrap{display:flex; width:700px; }
+	.A{background:gold; width:100px;height:100px;}
+	
+	#remove{display: none;}
+	#remove.a{ display:block; width:100px;height:100px;
+	 		background:gold; position:absolute; left:100px; top:100px;
+		}
+	#remove.b{ display:block; width:100px;height:100px;
+	 		background:green; position:absolute; left:100px; top:100px;
+		}
+	#remove.c{ display:block; width:100px;height:100px;
+	 		background:pink; position:absolute; left:100px; top:100px;
+		}
+	#remove.d{ display:block; width:100px;height:100px;
+	 		background:red; position:absolute; left:100px; top:100px;
+		}
+</style>
+<script type="text/javascript">
+	function init(){
+		let btns = document.getElementsByClassName("A");
+		for(i=0;i<btns.length;i++){
+			btns[i].addEventListener('click',btnTxt);
+		}
+	}
+	function btnTxt(event){
+		document.getElementById("target").innerText = 
+								"버튼 "+event.target.id+" 클릭";
+		let btn = document.querySelector('#remove');
+		if(event.target.id == 1)
+			btn.setAttribute('class','a')
+		if(event.target.id == 2)
+			btn.setAttribute('class','b')
+		if(event.target.id == 3)
+			btn.setAttribute('class','c')
+		if(event.target.id == 4){
+			console.log("클릭 4444");
+			d();
+		}
+	}
+	function closeRM(){
+		console.log('지우기 클릭')
+		let remove = document.querySelector('#remove');
+    	remove.removeAttribute('class');
+    	console.log("e : "+e);
+    	if(e != undefined){
+        	console.log("이프문 실행");
+    		clearTimeout(e);
+    		return;
+    	}
+	}
+	var e;
+	var flag=true;
+	var cnt=0;
+	function d(){
+		if(cnt==10){
+			cnt=0;
+			
+			closeRM();
+		}
+		else if(flag){
+			btn = document.querySelector('#remove');
+			btn.setAttribute('class','d');
+		}else{
+			let remove = document.querySelector('#remove');
+	    	remove.removeAttribute('class');
+		}
+		flag = !flag;
+		cnt++;
+		console.log(cnt+"=>"+e);
+    	e = setTimeout('d()', 100);
+	}
+</script>
+</head>
+<body onload="init()">
+	<div align="center">
+	<h3>넌센스퀴즈 => 신이 낳은 아기는?</h3>
+	<div id="wrap" align="center">
+	<div align="center">
+		<b>A조</b><br><input type="text" id="A">
+		<div class="A" id="target"></div>
+	</div>
+	<div align="center">
+		<b>B조</b><br><input type="text" id="B">
+		<div class="A" id="target"></div>
+	</div>
+	<div align="center">
+		<b>C조</b><br><input type="text" id="C">
+		<div class="A" id="target"></div>
+	</div>
+	<div><br>
+		<button onclick="closeRM()">정답 확인</button>
+	</div>
+	</div>
+	</div>
+	<!-- 
+	<div id="remove">
+		<h3 id="target"></h3>
+	</div>
+	<button class="btn" id="1">버튼 1</button>
+	<button class="btn" id="2">버튼 2</button>
+	<button class="btn" id="3">버튼 3</button>
+	<button class="btn" id="4">자동</button>
+	<button onclick="closeRM()">지우기</button>
+	 -->
+</body>
+</html>
+
+
+
