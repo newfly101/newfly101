@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery slide영역</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		$("#slide").click(function (){
+			$("#first").slideToggle('slow');
+		});
+	});
+</script>
+<style type="text/css">
+	#slide { padding: 5px; text-align: center; background-color: #e5eecc; border: solid 1px #c3c3c3;}
+	#first { display: none; background-color: yellow; height: 100px;}
+</style>
+</head>
+<body>
+	<div id="slide">[오늘의 공지사항]</div>
+	<div id="first">첫번재 영역</div>
+
+</body>
+</html>

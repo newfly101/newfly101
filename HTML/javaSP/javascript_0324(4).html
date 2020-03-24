@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		$("button.b1").click(function (){
+			$("img").animate({left:"100px", height:"100px" , width:"100px"})
+		});
+		$("button.b2").click(function (){
+			$("img").animate({width:200px});
+		});
+		$("button.b3").click(function (){
+			$("img").animate({margin:50px, left:50px});
+		});
+	});
+</script>
+<style>
+	.css_pic {height: 430px; text-align: center;}
+	.css_pic img {width: 250px;}
+</style>
+</head>
+<body>
+	<div class="css_pic">
+		버튼을 누르면 그림의 크기가 바뀝니다.<p/>
+		<button class="b1">가로 100px</button>
+		<button class="b2">가로 200px</button>
+		<button class="b3">가로 300px</button>
+		<img name="pic1" src="../resources/images/car01.png">
+	</div>
+
+</body>
+</html>

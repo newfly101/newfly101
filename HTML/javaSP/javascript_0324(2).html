@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery 예제 3</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function (){
+			$("button.add").click(function(){
+				$("h1, h2, p").addClass("blue");
+				$("div").addClass("important");
+			});
+			$("button.remove").click(function(){
+				$("h1, h2, p").removeClass("blue");
+				$("div").removeClass("important");
+			});
+			$("button.toggle").click(function(){
+				$("#01, #02, #03, #04").toggleClass("red");
+				/* 해당하는 id값들에 대해서 toggle클래스를 적용시킬 수 있다. */ 
+			});
+		})
+	</script>
+	<style type="text/css">
+		.important {font-weight: bold; font-size: xx-large;}
+		.blue {color: blue; }
+		.red {color: red; }
+	</style>
+</head>
+<body>
+	<h1>HTML5</h1>
+	<h2>CSS3</h2>
+	<p>자바 스크립트</p>
+	<div>JQuery</div><br>
+	<button class="add">CSS 적용</button>
+	<button class="remove">CSS 삭제</button>
+<hr>
+	<button class="toggle">toggle</button>
+	<h1 id="01">HTML5</h1>
+	<h2 id="02">CSS3</h2>
+	<p id="03">자바 스크립트</p>
+	<div id="04">JQuery</div><br>
+</body>
+</html>

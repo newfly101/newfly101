@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery 다른 예제</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		var n=0;
+		$(document).ready(function (){
+			$("div.out").mouseenter(function (){
+				$("p:first").text("마우스 포인터가 들어옴");
+				$("p:last").text(++n);
+			});
+			$("div.out").mouseleave(function (){
+				$("p").first().text("마우스 포인터가 나감");
+				$("p").last().text("최종 횟수 : "+n);
+			});
+			$("button").click(function (){
+				n=0;
+				$("p").text("마우스 이벤트 알아보기");
+			});
+			$("div.out").mousedown(function (){
+				$("p").first().hide();
+				$("p").text("메세지 사라짐");
+			});
+			$("div.out").mouseup(function (){
+				$("p").first().show();
+				$("p").last().text("최종 횟수 : "+n);
+			});
+		});
+	</script>
+<style type="text/css">
+	div.out {width: 200px; height: 100px; border: 1px solid #000000; text-align: center;background-color: yellow;}
+</style>
+</head>
+<body>
+	<div class="out"><p>마우스 이벤트 알아보기</p><p>0</p></div>
+	<button>초기화</button>
+</body>
+</html>

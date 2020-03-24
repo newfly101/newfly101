@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>오전 수업</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$(".button").click(function (){
+			$("p").hide();
+		});
+	});
+	$().ready(function (){
+		$(".button").click(function (){
+			$("p").hide();
+		});
+	});
+	$(function (){
+		$("button").click(function (){
+			$("p").hide();
+		});
+		$("button.show").click(function (){
+			$("p").show();
+		});
+	});
+	function test(){
+		$("p").hide();
+	}
+	/* jquery의 태그와 function의 자바스크립트들 모두는 동일한 기능을 가진다.(button앞에 .지우고 사용하면됨) */
+</script>
+</head>
+<body>
+	<p>메세지 : jquery를 공부하고 있습니다 </p>
+	<button>메세지 삭제</button>
+	<button class="show">메세지 보임</button><br>
+	<button onclick="test()"><b>메세지 삭제</b></button>
+	
+
+</body>
+</html>
