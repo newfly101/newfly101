@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>움직이는 리모콘</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery-1.12.1-ui.js"></script>
+<script type="text/javascript">
+	var n=20;
+	$(function() {
+		$("#draggable").draggable();
+		$("#slide").click(function (){
+			$("#first").slideToggle('fast');
+		});
+		$("img.minus").click(function (){
+			$("#divSize").animate({"font-size":n-=3});
+			$("div.size_f").text(n);
+		});
+		$("img.plus").click(function (){
+			$("#divSize").animate({"font-size":n+=3});
+			$("div.size_f").text(n);
+			
+		});
+	});
+</script>
+	<style type="text/css">
+		.drag {left:550px; top:-150px; width: 200px; height: 100px; padding: 0.5em; border-style: solid;}
+		#slide { text-align: center; background-color: #e5eecc; border: solid 1px #c3c3c3;}
+		#first { display: flex; flex-flow:row; background-color: #FCFCFC; height: auto; margin-top: 15px;}
+		.btn_m { order:1; width: 33%; text-align: center;}
+		.size_f { order:2; width:33%; text-align: center; height: .20px; margin-bottom: 5px;}
+		.size_f h5 { background-color: yellow;}
+		.btn_p { order:3; width: 33%; text-align: center;}
+		.minus { width:33px; height: 33px; margin-top: 15px;}
+		.plus { width: 33px; height: 33px; margin-top: 15px;}
+		#divSize {width: inherit; height: auto;}
+	</style>
+</head>
+<body>
+	<div id="divSize">
+		<h1>오늘의 소설</h1>
+		<h4>오늘도 덥다</h4>
+		<h4>내일도 덥다</h4>
+		<h4>모레는 바다</h4>
+	</div>
+	<div id="draggable" class="drag">
+		<div id="slide">[ 리 모 콘 ]</div>
+		<div id="first">
+			<div class="btn_m">
+				<img class="minus" src="../resources/images/sub.jpg"/>
+			</div>
+			<div class="size_f"> <h5>20</h5> </div>
+			<div class="btn_p">
+				<img class="plus" src="../resources/images/add.png"/>
+			</div>
+		</div>
+	</div>
+	
+	
+
+</body>
+</html>
