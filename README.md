@@ -1,4 +1,6 @@
+<!--
 ![header](https://capsule-render.vercel.app/api?type=venom&color=timeAuto&height=200&section=header&text=newfly101&fontSize=50&animation=twinkling&theme=merko)
+-->
 <h3 align="center">💡 My Most Used Languages 💡</h3>
 <p align="center">
   <a href="https://github.com/newfly101">
@@ -18,6 +20,24 @@
     <img align="center" src="https://github-readme-stats.vercel.app/api?username=newfly101&hide=${가릴항목}&hide_title=${타이틀숨김}&show_icons=${깃아이콘표시}&include_all_commits=$true&theme=merko" />
   </a>
 </p>
+<h3 align="center">💡 BAEKJOON  💡</h3>
+<p align="center">
+  <a href="https://solved.ac/newfly101">
+    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=newfly101" alt="Solved.ac Profile">
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
