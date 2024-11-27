@@ -1,0 +1,36 @@
+name: Update README with Gist Content
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 리포지토리 체크아웃
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Gist 내용 가져오기
+      - name: Fetch Gist Content
+        run: curl -sL "https://gist.githubusercontent.com/newfly101/a6077db117f9b1a259ec7bc5c7924240/raw/da76616e7266b4e319d649a4e548f71c62983340/I'm%2520a%2520night%2520%25F0%259F%25A6%2589" -o gist_content.txt
+
+      # 3. README 업데이트
+      - name: Update README
+        run: |
+          echo "### I'm a Night 🦉" > README.md
+          echo "\`\`\`" >> README.md
+          cat gist_content.txt >> README.md
+          echo "\`\`\`" >> README.md
+
+      # 4. 변경 사항 커밋 및 푸시
+      - name: Commit and Push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Update README with latest Gist content" || echo "No changes to commit"
+          git push
