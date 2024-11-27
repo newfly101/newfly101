@@ -6,7 +6,7 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnewfly101%2Fhit-counter&count_bg=%23F97580&title_bg=%23555555&icon=git.svg&icon_color=%23E7E7E7&title=Git&edge_flat=false)](https://hits.seeyoufarm.com)
 
-![Summary Card](https://raw.githubusercontent.com/newfly101/github-commit-time/main/profile-summary-card-output/README.md)
+[Summary Card](https://raw.githubusercontent.com/newfly101/github-commit-time/main/profile-summary-card-output/README.md)
 
 <!--
 **newfly101/newfly101** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
